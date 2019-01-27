@@ -6,7 +6,8 @@ from rango.models import Page
 
 def index(request):
     category_list = Category.objects.order_by('-likes')[:5]
-    context_dict = {'categories': category_list}
+    pages_list = Page.objects.order_by('views')[:5]
+    context_dict = {'categories': category_list, 'pages': pages_list}              #insert most viewed pages here
     return render(request, 'rango/index.html', context_dict)
 
 
