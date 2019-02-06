@@ -6,6 +6,11 @@
 {% endblock %}
 
 {% block body_block %}
+	{% if user.is_authenticated %}
+		howdy {{ user.username }}!
+	{% else %}
+		hey there partner!
+	{% endif %}
 			<strong>Most Liked Categories</strong><br />
 		</div>
 		<div>
