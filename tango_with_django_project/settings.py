@@ -27,6 +27,9 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '#)_o1jz8(ft+i$&q+6c-u##w2^xxa9(1bl6397qx$vyb#y4&j!'
 
@@ -55,6 +58,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
